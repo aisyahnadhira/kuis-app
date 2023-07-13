@@ -1,38 +1,157 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #E5E5E5;
+}
+
+.login{
+  display: flex;
+}
+.login img{
+  width: 500px;
+  height: 500px;
+}
+
+.login .login-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-input h2{
+  font-size: 60px;
+}
+
+.login-input input{
+  height: 40px;
+  margin: 10px 0px;
+  padding: 5px 10px;
+}
+
+.login-input button{
+  background-color: #FFC727;
+  padding: 5px 0px;
+  border: 1px solid #646464;
+  border-radius: 5px;
+}
+
+/* QUIZ */
+.question{
+  background-color: #fff;
+  padding: 30px 28px;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.question h3{
+  width: 280px;
+  margin-right: 20px;
+}
+
+.quiz .next-quiz{
+  margin-top: 20px;
+  float: right;
+  padding: 5px 10px;
+  background-color: #ff4e08;
+  border: 1px solid #646464;
+  border-radius: 5px;
+}
+
+.option {
+  background-color: #cccccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: 1px solid #646464;
+  border-radius: 5px;
+}
+
+.selected {
+  background-color: #FFC727;
+  color: #000000;
+}
+
+.quiz-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quiz-time img{
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+/* Result */
+.result-quiz{
+  background-color: #fff;
+  padding: 30px 28px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.result-quiz p{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.result h1, .result h2{
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.result img{
+  height: 300px;
+  width: 300px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container .restart{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
+  padding: 5px 10px;
+  background-color: #FFC727;
+  border: 1px solid #646464;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 425px) {
+  .login{
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .login img{
+    width: 300px;
+    height: 300px;
+  }
+
+  .question {
+    width: 350px;
+  }
+
+  .quiz-info,
+  .quiz{
+    width: 350px;
+  }
+
+  .question h3{
+    width: 200px;
+  }
+
+  .container .restart,
+  .quiz{
+    width: 100%;
   }
 }
