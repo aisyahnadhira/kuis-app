@@ -18,13 +18,12 @@ const Quiz = ({
     const fetchQuestions = async () => {
       const BASE_URL = "https://opentdb.com/api.php";
       const amount = 5;
-      const category = 9;
       const difficulty = "easy";
       const type = "multiple";
 
       try {
         const response = await fetch(
-          `${BASE_URL}?amount=${amount}&category=${category}&difficulty=${difficulty}&type=${type}`
+          `${BASE_URL}?amount=${amount}&difficulty=${difficulty}&type=${type}`
         );
         const data = await response.json();
         setQuestions(data.results);
